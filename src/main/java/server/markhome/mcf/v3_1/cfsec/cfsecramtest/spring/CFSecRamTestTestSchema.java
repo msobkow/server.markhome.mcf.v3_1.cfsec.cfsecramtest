@@ -103,14 +103,6 @@ public class CFSecRamTestTestSchema {
 			messages.append("Retrieved " + clusterResults.length + " entities from CFSec.Cluster\n");
 		}
 
-		ICFSecHostNode[] hostNodeResults = ICFSecSchema.getBackingCFSec().getTableHostNode().readAllDerived(null);
-		if (hostNodeResults == null) {
-			messages.append("Erroneously retrieved null for ICFSecSchema.getHostNodeTable().readAllDerived(null)\n");
-		}
-		else {
-			messages.append("Retrieved " + hostNodeResults.length + " entities from CFSec.HostNode\n");
-		}
-
 		ICFSecISOCcy[] iSOCcyResults = ICFSecSchema.getBackingCFSec().getTableISOCcy().readAllDerived(null);
 		if (iSOCcyResults == null) {
 			messages.append("Erroneously retrieved null for ICFSecSchema.getISOCcyTable().readAllDerived(null)\n");
@@ -159,36 +151,76 @@ public class CFSecRamTestTestSchema {
 			messages.append("Retrieved " + iSOTZoneResults.length + " entities from CFSec.ISOTZone\n");
 		}
 
-		ICFSecSecDevice[] secDeviceResults = ICFSecSchema.getBackingCFSec().getTableSecDevice().readAllDerived(null);
-		if (secDeviceResults == null) {
-			messages.append("Erroneously retrieved null for ICFSecSchema.getSecDeviceTable().readAllDerived(null)\n");
+		ICFSecSecSysGrp[] secSysGrpResults = ICFSecSchema.getBackingCFSec().getTableSecSysGrp().readAllDerived(null);
+		if (secSysGrpResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecSysGrpTable().readAllDerived(null)\n");
 		}
 		else {
-			messages.append("Retrieved " + secDeviceResults.length + " entities from CFSec.SecDevice\n");
+			messages.append("Retrieved " + secSysGrpResults.length + " entities from CFSec.SecSysGrp\n");
 		}
 
-		ICFSecSecGroup[] secGroupResults = ICFSecSchema.getBackingCFSec().getTableSecGroup().readAllDerived(null);
-		if (secGroupResults == null) {
-			messages.append("Erroneously retrieved null for ICFSecSchema.getSecGroupTable().readAllDerived(null)\n");
+		ICFSecSecSysGrpInc[] secSysGrpIncResults = ICFSecSchema.getBackingCFSec().getTableSecSysGrpInc().readAllDerived(null);
+		if (secSysGrpIncResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecSysGrpIncTable().readAllDerived(null)\n");
 		}
 		else {
-			messages.append("Retrieved " + secGroupResults.length + " entities from CFSec.SecGroup\n");
+			messages.append("Retrieved " + secSysGrpIncResults.length + " entities from CFSec.SecSysGrpInc\n");
 		}
 
-		ICFSecSecGrpInc[] secGrpIncResults = ICFSecSchema.getBackingCFSec().getTableSecGrpInc().readAllDerived(null);
-		if (secGrpIncResults == null) {
-			messages.append("Erroneously retrieved null for ICFSecSchema.getSecGrpIncTable().readAllDerived(null)\n");
+		ICFSecSecSysGrpMemb[] secSysGrpMembResults = ICFSecSchema.getBackingCFSec().getTableSecSysGrpMemb().readAllDerived(null);
+		if (secSysGrpMembResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecSysGrpMembTable().readAllDerived(null)\n");
 		}
 		else {
-			messages.append("Retrieved " + secGrpIncResults.length + " entities from CFSec.SecGrpInc\n");
+			messages.append("Retrieved " + secSysGrpMembResults.length + " entities from CFSec.SecSysGrpMemb\n");
 		}
 
-		ICFSecSecGrpMemb[] secGrpMembResults = ICFSecSchema.getBackingCFSec().getTableSecGrpMemb().readAllDerived(null);
-		if (secGrpMembResults == null) {
-			messages.append("Erroneously retrieved null for ICFSecSchema.getSecGrpMembTable().readAllDerived(null)\n");
+		ICFSecSecClusGrp[] secClusGrpResults = ICFSecSchema.getBackingCFSec().getTableSecClusGrp().readAllDerived(null);
+		if (secClusGrpResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecClusGrpTable().readAllDerived(null)\n");
 		}
 		else {
-			messages.append("Retrieved " + secGrpMembResults.length + " entities from CFSec.SecGrpMemb\n");
+			messages.append("Retrieved " + secClusGrpResults.length + " entities from CFSec.SecClusGrp\n");
+		}
+
+		ICFSecSecClusGrpInc[] secClusGrpIncResults = ICFSecSchema.getBackingCFSec().getTableSecClusGrpInc().readAllDerived(null);
+		if (secClusGrpIncResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecClusGrpIncTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secClusGrpIncResults.length + " entities from CFSec.SecClusGrpInc\n");
+		}
+
+		ICFSecSecClusGrpMemb[] secClusGrpMembResults = ICFSecSchema.getBackingCFSec().getTableSecClusGrpMemb().readAllDerived(null);
+		if (secClusGrpMembResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecClusGrpMembTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secClusGrpMembResults.length + " entities from CFSec.SecClusGrpMemb\n");
+		}
+
+		ICFSecSecTentGrp[] secTentGrpResults = ICFSecSchema.getBackingCFSec().getTableSecTentGrp().readAllDerived(null);
+		if (secTentGrpResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecTentGrpTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secTentGrpResults.length + " entities from CFSec.SecTentGrp\n");
+		}
+
+		ICFSecSecTentGrpInc[] secTentGrpIncResults = ICFSecSchema.getBackingCFSec().getTableSecTentGrpInc().readAllDerived(null);
+		if (secTentGrpIncResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecTentGrpIncTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secTentGrpIncResults.length + " entities from CFSec.SecTentGrpInc\n");
+		}
+
+		ICFSecSecTentGrpMemb[] secTentGrpMembResults = ICFSecSchema.getBackingCFSec().getTableSecTentGrpMemb().readAllDerived(null);
+		if (secTentGrpMembResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecTentGrpMembTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secTentGrpMembResults.length + " entities from CFSec.SecTentGrpMemb\n");
 		}
 
 		ICFSecSecSession[] secSessionResults = ICFSecSchema.getBackingCFSec().getTableSecSession().readAllDerived(null);
@@ -207,20 +239,20 @@ public class CFSecRamTestTestSchema {
 			messages.append("Retrieved " + secUserResults.length + " entities from CFSec.SecUser\n");
 		}
 
-		ICFSecService[] serviceResults = ICFSecSchema.getBackingCFSec().getTableService().readAllDerived(null);
-		if (serviceResults == null) {
-			messages.append("Erroneously retrieved null for ICFSecSchema.getServiceTable().readAllDerived(null)\n");
+		ICFSecSecUserPassword[] secUserPasswordResults = ICFSecSchema.getBackingCFSec().getTableSecUserPassword().readAllDerived(null);
+		if (secUserPasswordResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecUserPasswordTable().readAllDerived(null)\n");
 		}
 		else {
-			messages.append("Retrieved " + serviceResults.length + " entities from CFSec.Service\n");
+			messages.append("Retrieved " + secUserPasswordResults.length + " entities from CFSec.SecUserPassword\n");
 		}
 
-		ICFSecServiceType[] serviceTypeResults = ICFSecSchema.getBackingCFSec().getTableServiceType().readAllDerived(null);
-		if (serviceTypeResults == null) {
-			messages.append("Erroneously retrieved null for ICFSecSchema.getServiceTypeTable().readAllDerived(null)\n");
+		ICFSecSecUserPWHistory[] secUserPWHistoryResults = ICFSecSchema.getBackingCFSec().getTableSecUserPWHistory().readAllDerived(null);
+		if (secUserPWHistoryResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecUserPWHistoryTable().readAllDerived(null)\n");
 		}
 		else {
-			messages.append("Retrieved " + serviceTypeResults.length + " entities from CFSec.ServiceType\n");
+			messages.append("Retrieved " + secUserPWHistoryResults.length + " entities from CFSec.SecUserPWHistory\n");
 		}
 
 		ICFSecSysCluster[] sysClusterResults = ICFSecSchema.getBackingCFSec().getTableSysCluster().readAllDerived(null);
@@ -237,30 +269,6 @@ public class CFSecRamTestTestSchema {
 		}
 		else {
 			messages.append("Retrieved " + tenantResults.length + " entities from CFSec.Tenant\n");
-		}
-
-		ICFSecTSecGroup[] tSecGroupResults = ICFSecSchema.getBackingCFSec().getTableTSecGroup().readAllDerived(null);
-		if (tSecGroupResults == null) {
-			messages.append("Erroneously retrieved null for ICFSecSchema.getTSecGroupTable().readAllDerived(null)\n");
-		}
-		else {
-			messages.append("Retrieved " + tSecGroupResults.length + " entities from CFSec.TSecGroup\n");
-		}
-
-		ICFSecTSecGrpInc[] tSecGrpIncResults = ICFSecSchema.getBackingCFSec().getTableTSecGrpInc().readAllDerived(null);
-		if (tSecGrpIncResults == null) {
-			messages.append("Erroneously retrieved null for ICFSecSchema.getTSecGrpIncTable().readAllDerived(null)\n");
-		}
-		else {
-			messages.append("Retrieved " + tSecGrpIncResults.length + " entities from CFSec.TSecGrpInc\n");
-		}
-
-		ICFSecTSecGrpMemb[] tSecGrpMembResults = ICFSecSchema.getBackingCFSec().getTableTSecGrpMemb().readAllDerived(null);
-		if (tSecGrpMembResults == null) {
-			messages.append("Erroneously retrieved null for ICFSecSchema.getTSecGrpMembTable().readAllDerived(null)\n");
-		}
-		else {
-			messages.append("Retrieved " + tSecGrpMembResults.length + " entities from CFSec.TSecGrpMemb\n");
 		}
 
 		messages.append("CFSec tests complete\n");
