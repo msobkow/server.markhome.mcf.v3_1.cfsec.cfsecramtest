@@ -151,6 +151,30 @@ public class CFSecRamTestTestSchema {
 			messages.append("Retrieved " + iSOTZoneResults.length + " entities from CFSec.ISOTZone\n");
 		}
 
+		ICFSecSecUser[] secUserResults = ICFSecSchema.getBackingCFSec().getTableSecUser().readAllDerived(null);
+		if (secUserResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecUserTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secUserResults.length + " entities from CFSec.SecUser\n");
+		}
+
+		ICFSecSecUserPassword[] secUserPasswordResults = ICFSecSchema.getBackingCFSec().getTableSecUserPassword().readAllDerived(null);
+		if (secUserPasswordResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecUserPasswordTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secUserPasswordResults.length + " entities from CFSec.SecUserPassword\n");
+		}
+
+		ICFSecSecUserPWHistory[] secUserPWHistoryResults = ICFSecSchema.getBackingCFSec().getTableSecUserPWHistory().readAllDerived(null);
+		if (secUserPWHistoryResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecUserPWHistoryTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secUserPWHistoryResults.length + " entities from CFSec.SecUserPWHistory\n");
+		}
+
 		ICFSecSecSysGrp[] secSysGrpResults = ICFSecSchema.getBackingCFSec().getTableSecSysGrp().readAllDerived(null);
 		if (secSysGrpResults == null) {
 			messages.append("Erroneously retrieved null for ICFSecSchema.getSecSysGrpTable().readAllDerived(null)\n");
@@ -229,30 +253,6 @@ public class CFSecRamTestTestSchema {
 		}
 		else {
 			messages.append("Retrieved " + secSessionResults.length + " entities from CFSec.SecSession\n");
-		}
-
-		ICFSecSecUser[] secUserResults = ICFSecSchema.getBackingCFSec().getTableSecUser().readAllDerived(null);
-		if (secUserResults == null) {
-			messages.append("Erroneously retrieved null for ICFSecSchema.getSecUserTable().readAllDerived(null)\n");
-		}
-		else {
-			messages.append("Retrieved " + secUserResults.length + " entities from CFSec.SecUser\n");
-		}
-
-		ICFSecSecUserPassword[] secUserPasswordResults = ICFSecSchema.getBackingCFSec().getTableSecUserPassword().readAllDerived(null);
-		if (secUserPasswordResults == null) {
-			messages.append("Erroneously retrieved null for ICFSecSchema.getSecUserPasswordTable().readAllDerived(null)\n");
-		}
-		else {
-			messages.append("Retrieved " + secUserPasswordResults.length + " entities from CFSec.SecUserPassword\n");
-		}
-
-		ICFSecSecUserPWHistory[] secUserPWHistoryResults = ICFSecSchema.getBackingCFSec().getTableSecUserPWHistory().readAllDerived(null);
-		if (secUserPWHistoryResults == null) {
-			messages.append("Erroneously retrieved null for ICFSecSchema.getSecUserPWHistoryTable().readAllDerived(null)\n");
-		}
-		else {
-			messages.append("Retrieved " + secUserPWHistoryResults.length + " entities from CFSec.SecUserPWHistory\n");
 		}
 
 		ICFSecSysCluster[] sysClusterResults = ICFSecSchema.getBackingCFSec().getTableSysCluster().readAllDerived(null);
