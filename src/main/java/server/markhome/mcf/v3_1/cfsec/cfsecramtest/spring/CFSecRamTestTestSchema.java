@@ -268,6 +268,62 @@ public class CFSecRamTestTestSchema {
 			messages.append("Retrieved " + secTentGrpMembResults.length + " entities from CFSec.SecTentGrpMemb\n");
 		}
 
+		ICFSecSecRole[] secRoleResults = ICFSecSchema.getBackingCFSec().getTableSecRole().readAllDerived(null);
+		if (secRoleResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecRoleTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secRoleResults.length + " entities from CFSec.SecRole\n");
+		}
+
+		ICFSecSecRoleEnables[] secRoleEnablesResults = ICFSecSchema.getBackingCFSec().getTableSecRoleEnables().readAllDerived(null);
+		if (secRoleEnablesResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecRoleEnablesTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secRoleEnablesResults.length + " entities from CFSec.SecRoleEnables\n");
+		}
+
+		ICFSecSecRoleMemb[] secRoleMembResults = ICFSecSchema.getBackingCFSec().getTableSecRoleMemb().readAllDerived(null);
+		if (secRoleMembResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecRoleMembTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secRoleMembResults.length + " entities from CFSec.SecRoleMemb\n");
+		}
+
+		ICFSecSecClusRole[] secClusRoleResults = ICFSecSchema.getBackingCFSec().getTableSecClusRole().readAllDerived(null);
+		if (secClusRoleResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecClusRoleTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secClusRoleResults.length + " entities from CFSec.SecClusRole\n");
+		}
+
+		ICFSecSecClusRoleMemb[] secClusRoleMembResults = ICFSecSchema.getBackingCFSec().getTableSecClusRoleMemb().readAllDerived(null);
+		if (secClusRoleMembResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecClusRoleMembTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secClusRoleMembResults.length + " entities from CFSec.SecClusRoleMemb\n");
+		}
+
+		ICFSecSecTentRole[] secTentRoleResults = ICFSecSchema.getBackingCFSec().getTableSecTentRole().readAllDerived(null);
+		if (secTentRoleResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecTentRoleTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secTentRoleResults.length + " entities from CFSec.SecTentRole\n");
+		}
+
+		ICFSecSecTentRoleMemb[] secTentRoleMembResults = ICFSecSchema.getBackingCFSec().getTableSecTentRoleMemb().readAllDerived(null);
+		if (secTentRoleMembResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getSecTentRoleMembTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + secTentRoleMembResults.length + " entities from CFSec.SecTentRoleMemb\n");
+		}
+
 		ICFSecSecSession[] secSessionResults = ICFSecSchema.getBackingCFSec().getTableSecSession().readAllDerived(null);
 		if (secSessionResults == null) {
 			messages.append("Erroneously retrieved null for ICFSecSchema.getSecSessionTable().readAllDerived(null)\n");
