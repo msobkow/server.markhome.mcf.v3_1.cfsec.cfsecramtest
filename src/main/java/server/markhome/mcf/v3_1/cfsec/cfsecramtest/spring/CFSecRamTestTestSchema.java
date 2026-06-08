@@ -108,6 +108,14 @@ public class CFSecRamTestTestSchema {
 			messages.append("Retrieved " + tenantResults.length + " entities from CFSec.Tenant\n");
 		}
 
+		ICFSecTableInfo[] tableInfoResults = ICFSecSchema.getBackingCFSec().getTableTableInfo().readAllDerived(null);
+		if (tableInfoResults == null) {
+			messages.append("Erroneously retrieved null for ICFSecSchema.getTableInfoTable().readAllDerived(null)\n");
+		}
+		else {
+			messages.append("Retrieved " + tableInfoResults.length + " entities from CFSec.TableInfo\n");
+		}
+
 		ICFSecISOCcy[] iSOCcyResults = ICFSecSchema.getBackingCFSec().getTableISOCcy().readAllDerived(null);
 		if (iSOCcyResults == null) {
 			messages.append("Erroneously retrieved null for ICFSecSchema.getISOCcyTable().readAllDerived(null)\n");
