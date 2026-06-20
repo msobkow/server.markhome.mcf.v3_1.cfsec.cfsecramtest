@@ -61,7 +61,7 @@ public class CFSecRamTestTestSchema {
 				CFLibDbKeyHash256 mgrpid =   new CFLibDbKeyHash256("fabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabc");
 				ICFSecSecUser secUserResults = ICFSecSchema.getBackingCFSec().getTableSecUser().readDerived(null, adminpid);
 				if( secUserResults == null ) {
-					CFSecBuffSecUser newuser = (CFSecBuffSecUser)(ICFSecSchema.getBackingCFSec().getFactorySecUser().newRec());
+					CFSecBuffSecUser newuser = (CFSecBuffSecUser)(ICFSecSchema.getBackingCFSec().getCFSecFactory().getFactorySecUser().newRec());
 					newuser.setCreatedByUserId( adminpid );
 					newuser.setCreatedAt( now );
 					newuser.setUpdatedByUserId( adminpid );
