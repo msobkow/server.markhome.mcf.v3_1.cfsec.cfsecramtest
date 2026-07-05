@@ -50,7 +50,9 @@ import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
 import server.markhome.mcf.v3_1.cfsec.cfsec.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsec.buff.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecram.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecobj.*;
 
 @Service("RamTestCFSec")
 public class CFSecRamTestTestSchema {
